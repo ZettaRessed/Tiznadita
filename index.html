@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiznadita - Postres a Domicilio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!-- Favicon (Emoji Conejo) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐰</text></svg>">
+</head>
+<body>
+
+    <!-- Header / Navegación -->
+    <header id="main-header">
+        <div class="logo-container">
+            <span class="logo-icon">🐰</span>
+            <h1 id="site-name">Tiznadita</h1>
+        </div>
+        <nav>
+            <a href="#/home" class="nav-link">Inicio</a>
+            <a href="#/catalog" class="nav-link">Catálogo</a>
+            <a href="#/admin" class="nav-link admin-link">Admin</a>
+            <div class="cart-icon-wrapper" onclick="window.location.hash='#/carrito'">
+                <span class="cart-icon">🛒</span>
+                <span id="cart-count" class="cart-badge">0</span>
+            </div>
+        </nav>
+        <div class="currency-switch">
+            <label for="currency-toggle">S/</label>
+            <input type="checkbox" id="currency-toggle">
+            <label for="currency-toggle">$</label>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal de Vistas -->
+    <main id="app">
+        <!-- El contenido se inyectará aquí dinámicamente -->
+        <div class="loader" id="global-loader">
+            <div class="spinner">🍰</div>
+            <p>Cargando dulzura...</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <p>&copy; 2023 Tiznadita. Hecho con amor 🍓</p>
+        <div class="socials">
+            <span>Instagram</span> | <span>Facebook</span> | <span>WhatsApp</span>
+        </div>
+    </footer>
+
+    <!-- Scripts Externos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Firebase SDK (Compat para facilidad de uso vía CDN) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+
+    <!-- Scripts Propios -->
+    <script src="js/firebase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/publico.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
