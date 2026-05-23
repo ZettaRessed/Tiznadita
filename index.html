@@ -70,8 +70,12 @@
 
     <!-- Scripts Propios -->
     <script src="js/firebase.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/publico.js"></script>
+    
+    <!-- Cargar primero los archivos que contienen las definiciones de las funciones -->
+    <script src="js/publico.js"></script> 
     <script src="js/admin.js"></script>
+    
+    <!-- Cargar al final el archivo que contiene el router y la lógica de inicialización -->
+    <script src="js/app.js"></script>
 </body>
 </html>
